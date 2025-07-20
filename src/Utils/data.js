@@ -1,12 +1,12 @@
 
 export const stepVisit = [
   {
-    icon: "mdi:calendar-edit-outline",
+    icon: "mdi:whatsapp",
     title: "Escríbenos por WhatsApp",
     text: "Te atenderemos de inmediato."
   },
   {
-    icon: "mdi:whatsapp",
+    icon: "mdi:calendar-edit-outline",
     title: "Agenda tu consulta en minutos",
     text: "Ajustamos la cita según tu disponibilidad."
   },

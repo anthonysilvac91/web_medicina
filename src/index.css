@@ -43,6 +43,29 @@ body {
         xl:text-[50px]
     }
 
+    .h2-responsive{
+      @apply
+      /* sm:text-2xl */
+      sm:text-[28px]
+      lg:text-[32px]
+      xl:text-[40px]
+    }
+
+    .h3-responsive{
+      @apply
+      /* sm:text-lg */
+      sm:text-xl
+      lg:text-2xl
+      xl:text-3xl
+    }
+
+    .pCard-responsive{
+      @apply
+      sm:text-base
+      lg:text-xl
+      xl:text-2xl
+    }
+
     .p-responsive{
         @apply 
         text-base
