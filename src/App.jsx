@@ -4,6 +4,7 @@ import AboutUs from './Pages/AboutUs'
 import Contact from './Pages/Contact'
 import Home from './Pages/Home'
 import Navbar from './Components/Navbar'
+import { Footer } from 'flowbite-react'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/quienes-somos" element={<AboutUs />} />
         <Route path="/contacto" element={<Contact />} />
       </Routes>
+      
     </>
   )
 }

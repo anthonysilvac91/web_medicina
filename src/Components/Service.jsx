@@ -1,30 +1,78 @@
-
-import foto_doctor from '../assets/doctora.jpg'
-import CardService from './CardService'
+import Card from './Card.jsx'
+import { valueProps, services, steps} from '../Utils/data.js';
+import serviciosImg from '../assets/services.png'
+import contactoImg from '../assets/steps.png'
 
 const Service = () => {
   return (
-    <section className='flex padding-general md:flex-row flex-col justify-between xl:py-24 lg:py-16 md:py-10 py-10 sm:py-14 lg:gap-20 md:gap-10 '>
-        <div className=' h-[230px] xl:max-w-[400px] lg:max-w-[315px] md:max-w-[270px] flex justify-center items-center rounded-2xl overflow-hidden w-auto sm:h-[360px] md:h-auto mb-8 md:mb-0'>
-            <img className='w-full h-full object-cover md:object-contain' src={foto_doctor} alt="foto doctora" />
+    <section className='padding-general bg-bg-primary'>
+
+      {/* Sección Por que elegirnos */}
+      <div>
+        <h2 className='h2-responsive mb-5'>¿Por qué elegirnos?</h2>
+
+        <div className='flex xl:px-12 flex-wrap justify-between gap-2.5' >
+          <Card items={valueProps}/>
         </div>
-        <div className='2xl:pr-16'>
-            <h2 className="text-text-primary font-bold h2-responsive ">Cómo recibir atención médica <span className="text-bg-primary">sin salir de casa</span>
-            </h2>
-            <CardService/>
-            <div className='xl:mt-10 lg:mt-8 sm:mt-8 mt-6 flex justify-center'>
-                <a className='btn-responsive' href="#">Agenda por Whatsapp</a>
+
+      </div>
+
+      {/* Seccion servicios disponibles */}
+      <div>
+        <h2  className='h2-responsive mt-5 mb-5'>¿Qué servicios médicos ofrecemos a domicilio?</h2>
+
+        <div>
+          <div className='flex xl:px-12 gap-4 justify-between' >
+            <div className='flex flex-col justify-between gap-2.5' >
+              <Card items={services.slice(0,3)}/>
             </div>
+            <div className='max-w-[500px]'>
+              <img src={serviciosImg} alt="Servicios" />
+            </div>
+          </div>
+
+          <div className='flex xl:px-12 flex-wrap justify-between gap-2.5 mt-5'>
+            <Card items={services.slice(3)}/>
+          </div>
+        </div>
+      </div>
+
+      {/* Seccion pasos para contacto */}
+      <div>
+        <h2 className='h2-responsive mt-5 mb-5'>¿Cómo recibir atención médica en tu hogar?</h2>
+      </div>
+
+      <div className='flex gap-2.5 justify-between xl:px-12' >
+        <div className='max-w-[500px]'>
+          <img className='w-full hight-auto' src={contactoImg} alt="doctos_contacto" />
         </div>
         
+        <div className='flex flex-col justify-between'>
+          <Card items={steps} />
+          
+        </div>
+      </div>
 
+      <div className='flex justify-around items-center xl:px-12 mt-5' >
+        <div><a href="#" className='btn-responsive'>Solicitar Visita a Domicilio</a></div>
+          
+
+          <div  className=' flex rounded-2xl items-center gap-4 px-5 py-0'>
+                    <div className='bg-bg-secondary w-[80px] h-[80px] rounded-full flex justify-center items-center shrink-0'></div>
+                    <div className='flex flex-col'> 
+                        <h3 className='h3-responsive'>¡Así de simple! </h3>
+                        <p className='p-responsive'>Sin filas y con total comodidad.</p>
+                    </div>
+            </div>
+          
+        </div>
+
+        
+        
     </section>
+
+       
   )
 }
 
 export default Service
-
-
-//  <div className='xl:max-w-[400px] lg:max-w-[315px] md:max-w-[270px] sm:w-auto sm:h-[360px] rounded-[24px] sm:overflow-hidden flex justify-center items-center sm:mb-8'>
-//             <img className='rounded-2xl w-full h-full sm:object-cover' src={foto_doctor} alt="foto doctora" />
-//         </div>

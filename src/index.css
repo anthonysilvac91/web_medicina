@@ -5,26 +5,27 @@
 /* 🎨 Sistema de diseño */
 @theme {
   /* Variables de padding responsivo */
-  --spacing-psm: 100px;   /* sm: >= 640px */
+  --spacing-psm: 50px;   /* sm: >= 640px */
   --spacing-pmd: 50px;   /* md: >= 768px */
-  --spacing-pxl: 70px;  /* xl: >= 1024px */
-  --spacing-p2xl: 100px; /* 2xl: >= 1280px */
-  --spacing-p3xl: 200px; /* 3xl: >= 1536px */
-  --spacing-p4xl: 300px; /* 3xl: >= 1920px */
+  --spacing-plg: 100px;  /* xl: >= 1024px */
+  --spacing-pxl: 150px; /* 2xl: >= 1280px */
+  --spacing-p2xl: 200px; /* 3xl: >= 1536px */
+  --spacing-p3xl: 300px; /* 3xl: >= 1920px */
 
   /* Breakpoint adicional personalizado */
-  --breakpoint-4xl: 1920px;
-  --breakpoint-3xl: 1536px
+  --breakpoint-3xl: 1920px;
+  
 
   /* Tipografía */
   --font-sans: 'Poppins', sans-serif;
 
   /* Colores */
-  --color-bg-primary: #0B8FAC;
-  --color-bg-secondary: #E1EEFF;
+  --color-bg-primary: #F8F8FF;
+  --color-bg-secondary: #0B8FAC;
+  --color-bg-tertiary: #E1EEFF;
   --color-text-primary: #505F6D;
-  --color-text-secondary: #2E2E2E;
-  --color-text-bg-primary: #0B8FAC;
+  --color-card-primary: #FFFFFF;
+
 }
 
 
@@ -38,55 +39,74 @@ body {
     .h1-responsive{
         @apply
         text-2xl
-        sm:text-[32px]
+        sm:text-4xl
+        md:text-5xl
         lg:text-4xl 
-        xl:text-[50px]
+        xl:text-5xl
+        text-text-primary
+        font-bold
     }
 
     .h2-responsive{
       @apply
-      /* sm:text-2xl */
-      sm:text-[28px]
-      lg:text-[32px]
-      xl:text-[40px]
+      text-xl
+      sm:text-2xl
+      md:text-3xl
+      lg:text-2xl
+      xl:text-3xl
+      text-text-primary
+      font-bold
+
     }
 
     .h3-responsive{
       @apply
-      /* sm:text-lg */
-      sm:text-xl
-      lg:text-2xl
-      xl:text-3xl
+      text-sm
+      sm:text-base
+      md:text-xl
+      lg:text-base
+      xl:text-xl
+      text-text-primary
+      font-semibold
+    }
+
+    .h3Card-responsive{
+      @apply
+      2xl:text-xl
     }
 
     .pCard-responsive{
       @apply
       sm:text-base
       lg:text-xl
-      xl:text-2xl
+      xl:text-base
     }
 
     .p-responsive{
         @apply 
-        text-base
-        lg:text-lg 
-        xl:text-2xl
+        text-xs
+        sm:text-sm
+        md:text-base
+        lg:text-sm 
+        xl:text-base
+        text-text-primary
+        font-normal
     }
 
     .btn-responsive {
-    @apply text-white bg-bg-primary rounded-xl
+    @apply text-white bg-bg-secondary rounded-xl
            px-10 py-2 text-base
-           md:px-10 md:py-2 md:text-sm
-           lg:px-11 lg:py-3 lg:text-lg
-           xl:px-14 xl:py-4 xl:text-xl
+           md:px-10 md:py-2 
+           lg:px-11 lg:py-3 
+           xl:px-10 xl:py-3 
   }
 }
 
 /* 🧩 Clase utilitaria global para padding lateral responsivo */
 @layer utilities {
   .padding-general {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @media (min-width: 640px) {
       padding-left: var(--spacing-psm);
@@ -97,20 +117,20 @@ body {
       padding-right: var(--spacing-pmd);
     }
     @media (min-width: 1024px) {
+      padding-left: var(--spacing-plg);
+      padding-right: var(--spacing-plg);
+    }
+    @media (min-width: 1280px) {
       padding-left: var(--spacing-pxl);
       padding-right: var(--spacing-pxl);
     }
-    @media (min-width: 1280px) {
+      @media (min-width: 1536px) {
       padding-left: var(--spacing-p2xl);
       padding-right: var(--spacing-p2xl);
     }
-      @media (min-width: 1536px) {
+    @media (min-width: 1920px) {
       padding-left: var(--spacing-p3xl);
       padding-right: var(--spacing-p3xl);
-    }
-    @media (min-width: 1920px) {
-      padding-left: var(--spacing-p4xl);
-      padding-right: var(--spacing-p4xl);
     }
   }
 
