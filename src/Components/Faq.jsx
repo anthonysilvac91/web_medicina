@@ -18,7 +18,7 @@ function Faq({ items = [] }) {
         return (
           <div
             key={it.id || i}
-            className="rounded-2xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.06)] overflow-hidden"
+            className="rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] overflow-hidden"
           >
             {/* CABECERA */}
             <button
@@ -42,15 +42,14 @@ function Faq({ items = [] }) {
 
             {/* CONTENIDO */}
             <div
-              id={`faq-panel-${i}`}
-              role="region"
-              aria-hidden={!isOpen}
-              className={`px-6 pb-5 text-[15px] p-responsive transition-all duration-300
-                          ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}
-                          overflow-hidden`}
-            >
-              {it.text}
-            </div>
+    id={`faq-panel-${i}`}
+    role="region"
+    aria-hidden={!isOpen}
+    className={`bg-white transition-[max-height,padding,opacity] duration-300 overflow-hidden
+      ${isOpen ? 'max-h-60 px-6 py-5 opacity-100' : 'max-h-0 px-6 py-0 opacity-0'}`}  // 👈 py-0 cuando está cerrado
+  >
+    <p className="p-responsive">{it.text}</p>
+  </div>
           </div>
         );
       })}
