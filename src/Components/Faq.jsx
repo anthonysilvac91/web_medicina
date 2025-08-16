@@ -9,8 +9,8 @@ function Faq({ items = [] }) {
     const toggle = (i) => setOpenIndex((prev) => (prev === i ? null : i));
 
   return (
-    <section className="padding-general bg-bg-primary mt-7 mb-7">
-        <h2 className="h2-responsive mb-5">Preguntas Frecuentes</h2>
+    <section className="padding-general bg-bg-primary mt-10">
+        <h2 className="h2-responsive mb-10">Preguntas Frecuentes</h2>
    
     <div className="space-y-4 px-10">
       {items.map((it, i) => {

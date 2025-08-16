@@ -1,3 +1,5 @@
+import avatarImg from '../assets/avatar_generico.png'
+
 export const valueProps = [
   { id: 'speed', icon: 'hugeicons:flash', title: 'Rapidez garantizada', text: 'Llegamos a tu hogar sin demoras.' },
   { id: 'cert',  icon: 'bx:certification', title: 'Médicos certificados', text: 'Profesionales con registro oficial.' },
@@ -26,4 +28,52 @@ export const faqs = [
   { id: 'pago',    title: '¿Qué métodos de pago aceptan?', text: 'Efectivo, débito, crédito y transferencia.' },
 ];
 
-export const data = { valueProps, services, steps, faqs };
+export const testimonials = [
+  {
+    id: 'edera',
+    name: 'Edera Pereira',
+    rating: 5,
+    text: 'Quiero dar mi testimonio a la buena atención recibida por el médico.',
+    avatar: avatarImg, // opcional (ponla en public/avatars)
+    date: '2025-08-01',
+    source: 'Local'
+  },
+  {
+    id: 'maria',
+    name: 'María G.',
+    rating: 4,
+    text: 'Muy profesionales y puntuales. Repetiría el servicio.',
+    avatar: avatarImg,
+    date: '2025-07-22',
+    source: 'Local'
+  },
+  {
+    id: 'juan',
+    name: 'Juan R.',
+    rating: 5,
+    text: 'Atención cercana y explicaciones claras. ',
+    avatar: avatarImg,
+    date: '2025-07-10',
+    source: 'Local'
+  },
+  {
+    id: 'rocio',
+    name: 'Rocío L.',
+    rating: 5,
+    text: 'Excelente trato con mi madre. 100% recomendado.',
+    avatar: avatarImg,
+    date: '2025-06-30',
+    source: 'Local'
+  },
+  {
+    id: 'pablo',
+    name: 'Pablo S.',
+    rating: 4,
+    text: 'Llegaron rápido y resolvieron mi problema. recomendados 100%',
+    avatar: avatarImg,
+    date: '2025-06-15',
+    source: 'Local'
+  }
+];
+
+export const data = { valueProps, services, steps, faqs, testimonials };

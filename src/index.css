@@ -36,6 +36,9 @@ body {
   
 }
 
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
 
 @layer components{
     .h1-responsive{
