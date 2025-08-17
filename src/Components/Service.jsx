@@ -55,8 +55,18 @@ const Service = () => {
       </div>
 
       <div className='flex justify-around items-center xl:px-12 mt-5' >
-        <div><a href="#" className='btn-responsive'>Solicitar Visita a Domicilio</a></div>
-          
+        {/* <div><a href="#" className='btn-responsive'>Solicitar Visita a Domicilio</a></div> */}
+         <div>
+          <a
+                href="https://wa.me/56911111111"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md px-5 py-3 font-semibold text-white bg-[#0ea5a3] hover:bg-[#0b8e8c] shadow-sm transition-colors"
+              >
+                <Icon icon="mdi:whatsapp" className="w-5 h-5" />
+                Solicitar visita por WhatsApp
+              </a>
+          </div> 
 
           <div  className=' flex rounded-2xl items-center gap-4 px-5 py-0'>
                     <Icon className="text-bg-secondary"icon='mdi:check-bold'

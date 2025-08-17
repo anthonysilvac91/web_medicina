@@ -50,6 +50,8 @@ body {
         xl:text-5xl
         text-text-primary
         font-bold
+        lg:text-start
+        text-center
     }
 
     .h2-responsive{
@@ -96,6 +98,7 @@ body {
         xl:text-base
         text-text-primary
         font-normal
+        
     }
 
     .btn-responsive {
