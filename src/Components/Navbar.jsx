@@ -5,7 +5,7 @@ import logo from "../assets/logo2.png"
 
 const Nav = () => {
   return (
-    <Navbar fluid className=" !bg-bg-tertiary padding-general md:py-8">
+    <Navbar fluid className=" !bg-bg-primary padding-general md:py-8">
       
       <NavbarBrand href="#">
          <img src={logo} className="w-[200px]" alt="Flowbite React Logo" />

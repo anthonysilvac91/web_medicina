@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-bg-tertiary">
+    <section className="relative overflow-hidden">
       {/* Gradientes de fondo sutiles */}
       <div className="pointer-events-none absolute inset-0 opacity-70">
         <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_10%_-20%,rgba(14,165,163,0.12),transparent)]"></div>
@@ -67,9 +67,9 @@ export default function Hero() {
       
           <div className="relative">
             {/* Blob de color detrás (sin fondo blanco) */}
-            <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[2.5rem] bg-gradient-to-br from-[#0ea5a3]/20 via-[#06b6d4]/20 to-transparent blur-2xl"></div>
-            {/* halo sutil */}
-            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] ring-1 ring-white/40/0"></div>
+            {/* <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[2.5rem] bg-gradient-to-br from-[#0ea5a3]/20 via-[#06b6d4]/20 to-transparent blur-2xl"></div>
+            halo sutil */}
+            {/* <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] ring-1 ring-white/40/0"></div> */}
 
             <img
               src={logo}
