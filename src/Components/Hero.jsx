@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
 
       <div className="relative  2xl:px-p2xl xl:px-pxl lg:px-[70px] sm:px-pmd px-[20px] py-12 md:py-16 lg:py-20">
-        <div className="mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-10 md:grid-cols-2">
+        <div className="mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-10">
           {/* Copy + CTAs */}
           <div className="">
             <h1 className="h1-responsive font-extrabold tracking-tight leading-tight">

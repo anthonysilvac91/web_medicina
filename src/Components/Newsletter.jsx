@@ -48,14 +48,15 @@ export default function Newsletter({
 
         {/* Tarjeta de suscripción */}
         <div className="rounded-2xl bg-blue-50/90 md:p-8
-                        shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
-          <h3 className="text-center font-semibold text-gray-700 mb-4">
+                        shadow-[0_4px_12px_rgba(0,0,0,0.06)] py-4 lg:py-2">
+          <h3 className="h3-responsive mb-4 py-4 text-center">
             {title}
           </h3>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* honeypot anti-bots (invisible) */}
             <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
+            <div className="px-5">
 
             <input
               type="email"
@@ -69,6 +70,7 @@ export default function Newsletter({
               onChange={(e) => setEmail(e.target.value)}
               aria-invalid={status === "error"}
             />
+            </div>
 
             <div className="flex justify-center">
               <button
