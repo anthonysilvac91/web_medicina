@@ -1,24 +1,49 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# ==== Secrets & Env files ====
+api/.env
+.env
+.env.local
+.env.*.local
+*.env
+*.env.local
+*.env.*.local
+# Mantén los ejemplos versionados
+!.env.example
+!api/.env.example
 
-node_modules
-dist
-dist-ssr
-*.local
+# Claves/certificados (por si generas TLS u otros)
+*.pem
+*.key
+*.pfx
+certs/
+secrets/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# ==== Framework build outputs / caches ====
+# Next.js / Vercel
+.next/
+.vercel/
+out/
+# Nuxt
+.nuxt/
+# Herramientas de build
+.cache/
+.turbo/
+.parcel-cache/
+.eslintcache
+coverage/
+
+# ==== Tests (si usas Cypress) ====
+cypress/screenshots/
+cypress/videos/
+
+# ==== SO / Editor extra ====
+Thumbs.db
+
+# ==== Paquetería / compilación ====
+.pnpm-store/
+*.tsbuildinfo
+
+# ==== Bases de datos locales (si usas SQLite u otras en dev) ====
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
