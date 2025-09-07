@@ -84,6 +84,8 @@
 
 // export default Newsletter;
 
+//se agrega solo por add
+
 
 import { useState } from "react";
 import doctorImg from "../assets/doctor.png"
@@ -170,3 +172,5 @@ function Newsletter({
 }
 
 export default Newsletter;
+
+
