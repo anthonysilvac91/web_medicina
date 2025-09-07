@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), flowbiteReact()],
   server: {
     proxy: {
-      "/api": "http://localhost:3001" 
-  }
+      "/api": "http://localhost:3001",
+    },
+  },
 })
