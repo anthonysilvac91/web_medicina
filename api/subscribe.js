@@ -1,41 +1,40 @@
-// api/subscribe.js  (CommonJS, funciona en Vercel sin tocar tu package.json)
-const mailchimp = require('@mailchimp/mailchimp_marketing');
-const crypto = require('crypto');
-
-mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,       // ej: xxxxx-us21
-  server: process.env.MAILCHIMP_SERVER_PREFIX, // ej: "us21"
-});
-
-module.exports = async (req, res) => {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-  let email = '';
-  try { ({ email } = JSON.parse(req.body || '{}')); } catch {}
-  if (!email || !/\S+@\S+\.\S+/.test(email)) {
-    return res.status(400).json({ error: 'Invalid email' });
+// api/subscribe.js
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
-
-  const listId = process.env.MAILCHIMP_AUDIENCE_ID;
 
   try {
-    // Lo más simple: alta directa (single opt-in). Si prefieres double opt-in, cambia a 'pending'
-    await mailchimp.lists.addListMember(listId, {
-      email_address: email,
-      status: 'subscribed', // <-- usa 'pending' para double opt-in
-      tags: ['newsletter', 'medhogar'],
-    });
-    return res.status(200).json({ ok: true });
-  } catch (err) {
-    // Si ya existe, lo tratamos como éxito y activamos la tag
-    if (err?.status === 400 && err?.response?.body?.title === 'Member Exists') {
-      const hash = crypto.createHash('md5').update(email.toLowerCase()).digest('hex');
-      await mailchimp.lists.updateListMemberTags(listId, hash, {
-        tags: [{ name: 'newsletter', status: 'active' }],
-      });
-      return res.status(200).json({ ok: true, already: true });
+    const { email } = req.body || {};
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      return res.status(400).json({ error: "Invalid email" });
     }
-    console.error(err);
-    return res.status(500).json({ error: 'Mailchimp error' });
+
+    const listId = parseInt(process.env.BREVO_LIST_ID, 10);
+
+    const r = await fetch("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "api-key": process.env.BREVO_API_KEY,
+      },
+      body: JSON.stringify({
+        email,
+        updateEnabled: true,   // Si ya existe, actualiza
+        listIds: [listId],     // Lo toma de tu variable de entorno
+      }),
+    });
+
+    if (!r.ok) {
+      const txt = await r.text();
+      console.error("Brevo error:", txt);
+      return res.status(r.status).json({ error: "Brevo error", detail: txt });
+    }
+
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error("Server error:", e);
+    return res.status(500).json({ error: "Internal server error" });
   }
-};
+}
