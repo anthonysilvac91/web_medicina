@@ -22,10 +22,10 @@ export const steps = [
 ];
 
 export const faqs = [
-  { id: 'comunas', title: '¿En qué comunas están disponibles?', text: 'Lorem ipsum dolor sit amet...' },
-  { id: 'tiempo',  title: '¿Cuánto tarda en llegar el médico?', text: 'Depende del sector; promedio 45–60 min.' },
-  { id: 'emerg',   title: '¿Atienden emergencias?', text: 'No somos servicio de urgencias vitales.' },
-  { id: 'pago',    title: '¿Qué métodos de pago aceptan?', text: 'Efectivo, débito, crédito y transferencia.' },
+  { id: 'comunas', title: '¿En qué comunas están disponibles?', text: 'Atendemos en toda la Región Metropolitana de Santiago, sin importar la comuna.' },
+  { id: 'tiempo',  title: '¿Cuánto tarda en llegar el médico?', text: 'El tiempo de llegada promedio es de 45 a 60 minutos, dependiendo de tu ubicación exacta en Santiago.' },
+  { id: 'emerg',   title: '¿Atienden emergencias?', text: 'No. Nuestro servicio está orientado a consultas médicas a domicilio no urgentes. En caso de emergencia, debes llamar al 131 (SAMU) o acudir al servicio de urgencias más cercano.' },
+  { id: 'pago',    title: '¿Qué métodos de pago aceptan?', text: 'Puedes pagar la consulta en efectivo o mediante transferencia bancaria segura.' },
 ];
 
 export const testimonials = [

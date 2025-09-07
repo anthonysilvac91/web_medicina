@@ -15,9 +15,8 @@ const Service = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 xl:px-12' >
           <Card items={valueProps}/>
         </div>
-
-      </div>
-
+         </div>
+        
 {/*------- Seccion servicios disponibles */}
  
 
@@ -29,7 +28,8 @@ const Service = () => {
             <Card items={services.slice(0,3)} itemClassName="w-full" />
           </div>
           <div className='flex items-center max-w-lg mx-auto justify-center'>
-            <img src={serviciosImg} />
+            <img src={serviciosImg}  alt="servicios_medicos" />
+            
           </div>
         </div>
 
@@ -47,7 +47,7 @@ const Service = () => {
         <h2 className='h2-responsive mt-15 mb-10'>¿Cómo recibir atención médica en tu hogar?</h2>
         <div className='flex flex-col lg:grid lg:grid-cols-2 xl:px-12 gap-4'>
           <div className='flex items-center max-w-lg mx-auto justify-center'>
-            <img src={contactoImg} />
+            <img src={contactoImg} alt="pasos_contacto" />
           </div>
           <div className=" flex flex-col lg:justify-around items-center gap-4 2xl:gap-0">
             <Card items={steps} itemClassName="w-full" />
@@ -57,7 +57,7 @@ const Service = () => {
         <div className='flex items-center justify-center lg:flex-row xl:px-12 gap-4 mt-4'>
           
           <a
-                href="https://wa.me/56911111111"
+                href="https://wa.me/56973107989"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-md px-5 py-3 font-semibold text-white bg-[#0ea5a3] hover:bg-[#0b8e8c] shadow-sm transition-colors"

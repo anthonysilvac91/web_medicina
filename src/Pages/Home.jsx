@@ -15,8 +15,8 @@ const Home = () => {
     <div className='bg-bg-secondary h-10'></div>
     <Service/>  
     <div className='bg-bg-secondary padding-general py-15'>
-      <h2 className='h2-responsive text-white mb-5'>Servicios de medicina general en tu hogar </h2>
-      <p className='p-responsive text-white'>En MEDHOGAR, brindamos servicios médicos personalizados y seguros donde más los necesitas: en casa. Nuestro equipo de profesionales está listo para ayudarte con eficiencia, calidez y compromiso.</p>
+      <h2 id="quienes-somos" className='h2-responsive text-white mb-5'>Servicios de medicina general a domicilio en Santiago</h2>
+      <p className='p-responsive text-white'>En MedHogar ofrecemos consultas médicas generales a domicilio en toda la Región Metropolitana. Nuestro equipo de médicos certificados se traslada hasta tu hogar para realizar evaluaciones, diagnósticos y recetas, entregando una atención rápida, segura y personalizada sin que tengas que salir de casa.</p>
     </div>
     <Faq items={faqs} />
     <TestimonialsCarousel items={testimonials} />

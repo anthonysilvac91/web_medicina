@@ -1,5 +1,5 @@
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
-import { Link } from "react-router-dom";
+
 import { menuItems } from "../Utils/menuItems";
 import logo from "../assets/logo2.png"
 
@@ -15,8 +15,8 @@ const Nav = () => {
       <NavbarToggle />
 
       <NavbarCollapse >
-         {menuItems.map(({ text, route }) => (
-    <NavbarLink className="!text-text-primary text-[20px]" key={route} as={Link} to={route}>
+         {menuItems.map(({ text, href }) => (
+    <NavbarLink className="!text-text-primary text-[20px]" key={href} href={href}>
       {text}
     </NavbarLink>
   ))}

@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden">
       {/* Gradientes de fondo sutiles */}
       <div className="pointer-events-none absolute inset-0 opacity-70">
         <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_10%_-20%,rgba(14,165,163,0.12),transparent)]"></div>
@@ -16,21 +16,23 @@ export default function Hero() {
           {/* Copy + CTAs */}
           <div className="">
             <h1 className="h1-responsive font-extrabold tracking-tight leading-tight">
-              Atención médica rápida y confiable{" "}
+              Médico a domicilio en Santiago{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0ea5a3] to-[#06b6d4]">
-                donde estés
+                rápido, seguro y confiable
               </span>
             </h1>
 
             <p className="p-responsive lg:text-start text-center mt-4 md:mt-5 md:mb-6 ">
-              Médicos a domicilio en Santiago, entregando atención de calidad y
-              confianza en la comodidad y seguridad de tu hogar.
+              Servicio de atención médica en casa con doctores certificados. 
+              Llegamos a tu hogar en menos de una hora para brindarte 
+              diagnósticos, recetas y tratamientos sin esperas, 
+              con la comodidad y seguridad que mereces.
             </p>
 
             {/* CTAs */}
             <div className="mt-4 flex flex-wrap lg:justify-start justify-center  items-center gap-3">
               <a
-                href="https://wa.me/56911111111"
+                href="https://wa.me/56973107989"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-md px-5 py-3 font-semibold text-white bg-[#0ea5a3] hover:bg-[#0b8e8c] shadow-sm transition-colors"
@@ -39,7 +41,7 @@ export default function Hero() {
                 Solicitar visita por WhatsApp
               </a>
               <a
-                href="tel:+56911111111"
+                href="tel:+56973107989"
                 className="inline-flex items-center gap-2 rounded-md px-5 py-3 font-semibold text-[#0b8e8c] ring-1 ring-[#94d8d6] hover:bg-white transition-colors"
               >
                 <Icon icon="mdi:phone" className="w-5 h-5" />
